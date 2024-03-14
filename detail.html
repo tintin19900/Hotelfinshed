@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <header id = "header-bg" class="bg-image-full d-flex flex-column" style="width: 100vw; height: 100vh;">
+        <div class="container d-flex align-items-center">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mt-3 mb-2 justify-content-center mb-md-0">
+                <li><a href="/index.html" class="nav-link px-3 link-light a-link">Home</a></li>
+                <li><a href="/deals.html" class="nav-link px-3 link-light a-link">Deals</a></li>
+                <li><a href="/account.html" class="nav-link px-3 link-light a-link">Account</a></li>
+                <li><a href="/about.html" class="nav-link px-3 link-light a-link">About us</a></li>
+            </ul>
+            <div id="login_user" class="text-end align-self-end">
+                <a href="/login.html"><button type="button" class="btn btn btn-outline-light me-2">login</button></a>
+                <a href="signup.html"><button type="button" class="btn btn btn-light">sign up</button></a>
+            </div>
+        </div>
+        <div class="m-lg-auto my-auto mx-5">
+            <h5 id = "hotel-location" class="text-uppercase text-light text-center"></p>
+            <h1 id = "hotel-name" class="fw-light text-wrap text-light text-center" style="font-size: 80px; max-width: 80vw;"></h1>
+        </div>
+        <div class="mouse_scroll m-0 mx-auto mb-5">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
+    </header>
+    <main class="container mt-5">
+        <div class="row p-md-5 py-5 my-5 border-bottom border-secondary-subtle">
+            <div class="col-3">
+                <div class="border-top pt-3 border-black border-2" style="width: min-content;">
+                    <p class="fw-bold text-uppercase">About Accommodation</p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <p class="text-secondary">Staying at our hotel is a good choice when you are visiting there. 24-hours front desk is available to serve you, from check-in to check-out, or any assistance you need. Should you desire more, do not hesitate to ask the front desk, we are always ready to accommodate you. WiFi is available within public areas of the property to help you to stay connected with family and friends.</p>
+            </div>
+            <div class="col my-5">
+                <div class="row gx-4">
+                    <div class="col">
+                        <div id = "img1" class="bg-image-full ms-auto" style="width: 600px; height: 300px; background-position: center; background-size: cover;"></div>
+                    </div>
+                    <div class="col-2 text-center">
+                        <p class="fw-semibold text-capitalize m-lg-0 mt-3" p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-5">
+                <div class="row gx-4">
+                    <div class="col-2 text-center">
+                        <p class="fw-semibold text-capitalize" p>
+                    </div>
+                    <div class="col">
+                        <div id = "img2" class="bg-image-full me-auto" style="width: 600px; height: 300px; background-position: center; background-size: cover;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-5">
+                <div class="row gx-4">
+                    <div class="col">
+                        <div id = "img3" class="bg-image-full ms-auto" style="width: 600px; height: 300px; background-position: center; background-size: cover;"></div>
+                    </div>
+                    <div class="col-2 text-center">
+                        <p class="fw-semibold text-capitalize m-lg-0 mt-3" p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Available Room</h2>
+        <div class="row row-cols-1 mb-5 border-bottom border-secondary-subtle">
+            <!-- for each hotel -->
+            <div id = "room-list" class="col py-5 border-bottom border-secondary-subtle">
+                <div class="row gx-lg-5">
+                    <div class="col-auto">
+                        <!-- picture -->
+                        <div class="bg-image-full" style="width: 300px; height: 200px; background-image: url(https://picsum.photos/300/200);"></div>
+                    </div>
+                    <div class="col-auto me-auto mt-lg-0 mt-4">
+                        <!-- hotel name -->
+                        <h4 class="hotel_name mb-3 text-uppercase">Centre Point Prime Hotel Pattaya</h4>
+                        <!-- hotel rating -->
+                        <div class="d-flex align-items-center mb-2">
+                            <h5 class="m-0 me-1"><i class="bi bi-star"></i></h5>
+                            <h5 class="m-0 me-1"><i class="bi bi-star"></i></h5>
+                            <h5 class="m-0 me-1"><i class="bi bi-star"></i></h5>
+                        </div>
+                        <!-- hotel location -->
+                        <div class="d-flex align-items-center mb-2">
+                            <h5 class="m-0 me-3"><i class="bi bi-geo-alt"></i></h5>
+                            <p class="m-0 text-capitalize text-body-secondary">thailand, pattaya</p>
+                        </div>
+                    </div>
+                    <!-- hotel price -->
+                    <div class="col-auto align-self-end text-end">
+                        <p class="m-0 mb-1 text-body-secondary text-decoration-line-through">THB 1500.00</p>
+                        <h4 class="mb-3 fw-bolder">THB 1200.31</h4>
+                        <button type="button" class="btn btn-dark fw-bold" style="width: 200px;">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="fw-bold">Other Accommodations You Might Like</h4>
+        <div class="mt-4 pb-4 mb-5 border-bottom border-secondary-subtle justify-content-start">
+            <div id = "recommendations" class="d-flex">
+                <!-- for each hotel -->
+                <div>
+                    <div class="card mb-4 me-lg-5 me-1 shadow-sm" style="width: 15rem;">
+                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize mb-1 fw-bold">hilton hattaya</h5>
+                            <div class="d-flex mb-1">
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="d-flex">
+                                <p class="m-0 me-1"><i class="bi bi-geo-alt"></i></p>
+                                <p class="text-body-secondary">thailand, pattaya</p>
+                            </div>
+                            <p class="m-0 text-body-secondary text-decoration-line-through"><small>THB 1500.00</small></p>
+                            <p class="fw-semibold">THB 1238.23</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Reviews</h2>
+        <p class="text-body-secondary">Most Recent Photos by Guests</p>
+        <div class="d-flex pb-5 align-items-center border-bottom border-secondary-subtle">
+            <h2 class="m-0"><span id = "rating" class="badge text-bg-dark"></span></h2>
+            <div class="my-0 mx-4">
+                <h5 id = "feedback" class="m-0 fw-bold">Very good</h5>
+                <p id = "feedbacknum" class="m-0 text-body-secondary"><small>verified reviews</small></p>
+            </div class="m-0">
+        </div>
+        <div id="result_feedback" class="row row-cols-1 mb-5">
+            <div class="col py-3 border-bottom border-secondary-subtle">
+                <div class="row mt-2">
+                    <div class="col-auto mx-3">
+                        <img src="https://picsum.photos/80/80" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex mb-1">
+                                <p class="m-0 pe-3 me-3 border-end border-secondary-subtle fw-bold">5.0 Amazing</p>
+                                <p class="m-0 text-secondary text-capitalize">username</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis eaque impedit qui vero, perferendis quibusdam, saepe minima magnam molestias numquam, fuga deleniti natus voluptatem delectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-4 bg-black">
+        <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
+            <li><a href="/index.html" class="nav-link px-3 link-light a-link">Home</a></li>
+            <li><a href="/deals.html" class="nav-link px-3 link-light a-link">Deals</a></li>
+            <li><a href="/account.html" class="nav-link px-3 link-light a-link">Account</a></li>
+            <li><a href="/about.html" class="nav-link px-3 link-light a-link">About us</a></li>
+        </ul>
+        <p class="text-center text-secondary">© 2024 Company, Inc</p>
+    </footer>
+    <script src = "backend/detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <header class="bg-image-full d-flex flex-column mb-5" style="width: 100vw; height: 80vh; background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.35)) ,url(https://picsum.photos/1400/700);">
+        <div class="container d-flex align-items-center">
+            <!-- logo -->
+            <div class="container d-flex align-items-center">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mt-3 mb-2 justify-content-center mb-md-0">
+                    <li><a href="/index.html" class="nav-link px-3 link-light a-link">Home</a></li>
+                    <li><a href="/deals.html" class="nav-link px-3 link-light a-link">Deals</a></li>
+                    <li><a href="/account.html" class="nav-link px-3 link-light a-link">Account</a></li>
+                    <li><a href="/about.html" class="nav-link px-3 link-light a-link">About us</a></li>
+                </ul>
+                <div class="text-end align-self-end">
+                    <button id = "nav-login" type="button" class="btn btn btn-outline-light me-2">login</button>
+                    <button id = "nav-signup" type="button" class="btn btn btn-light">sign up</button>
+                </div>
+            </div>
+        </div>
+        <div class="container my-auto">
+            <img src="https://www.sunsetlearning.com/wp-content/uploads/2019/09/User-Icon-Grey.png"
+            class="rounded-circle mx-auto d-block border border-3 border-light" alt="user_picture" style="width: 300px;">
+        </div>
+    </header>
+    <div class="container">
+        <h2>Account</h2>
+        <div id="userdata" class="my-4 py-4 border-top border-bottom border-secondary-subtle">
+            <div class="d-flex mb-3 justify-content-between">
+                <div>
+                    <p class="m-0">Name</p>
+                    <h5 class="m-0" id="name"></h5>
+                </div>
+                <!-- Button trigger modal -->
+                <button id='changebutton' type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#nameBackdrop">
+                    Change
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="nameBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="nameBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title fs-5" id="nameBackdropLabel">Change information</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="new-name" class="form-label">New Name</label>
+                                        <input class="form-control" id="newname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="new-email" class="form-label">New Password</label>
+                                        <input class="form-control" id="newemail">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="newdatasubmit" type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex mb-3 justify-content-between">
+                <div>
+                    <p class="m-0">Email</p>
+                    <h5 class="m-0" id="email"></h5>
+                </div>
+            </div>
+            <button id = "logout-button" type="button" class="btn btn-dark">Log Out</button>
+        </div>
+        <h2>Booking</h2>
+        <div>
+            <div class="row row-cols-1 my-4 py-4 border-top border-bottom border-secondary-subtle">
+                <div class="col" id="account-booking-list">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-lg-flex align-items-center">
+                            <div style="width: 180px; height: 120px; background-image: url(https://picsum.photos/180/120); background-position: center; background-size: cover;"></div>
+                            <div class="mx-lg-5 mt-lg-0 mt-4">
+                                <p class="m-0">check in</p>
+                                <h5 class="m-0" id="checkin"></h5>
+                            </div>
+                            <div class="pe-5 me-5 mt-lg-0 mt-4 border-end border-secondary-subtle">
+                                <p class="m-0">check out</p>
+                                <h5 class="m-0" id="checkout"></h5>
+                            </div>
+                            <div class="mt-lg-0 mt-4">
+                                <h5 class="m-0" id="hotel"></h5>
+                                <p class="m-0" id="room"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- receipt -->
+                            <button id='receiptbutton' type="button" class="btn btn-outline-dark me-3" data-bs-toggle="modal" data-bs-target="#receiptBackdrop"><i class="bi bi-receipt-cutoff"></i>Receipt</button>
+                            <div class="modal fade" id="receiptBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="receiptBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title fs-5" id="receiptBackdropLabel">Receipt details</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4 class="text-uppercase ">hotel name</h4>
+                                            <h5>room name</h5>
+                                            <p>date in</p>
+                                            <p class="text-secondary">date out</p>
+                                            <p class="m-0 pb-4 mb-4 border-bottom border-secondary-subtle"></p>
+                                            <p>price</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="newdatasubmit" type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- review -->
+                            <button id='reviewbutton' type="button" class="btn btn-outline-dark me-3" data-bs-toggle="modal" data-bs-target="#reviewBackdrop"><i class="bi bi-wrench-adjustable me-2"></i>Review</button>
+                            <div class="modal fade" id="reviewBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title fs-5" id="reviewBackdropLabel">Review hotel</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="rating_review" class="form-label">Rating</label>
+                                                    <input id = "rating_review" type="number" class="form-control border border-white">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="comment_review" class="form-label">Comment</label>
+                                                    <input id = "comment_review" class="form-control border border-white">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="commentsubmit" type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- change -->
+                            <button id='changebutton' type="button" class="btn btn-outline-dark me-3" data-bs-toggle="modal" data-bs-target="#changeBackdrop"><i class="bi bi-wrench-adjustable me-2"></i>Change</button>
+                            <div class="modal fade" id="changeBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="nameBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title fs-5" id="nameBackdropLabel">Change reservation</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="new-name" class="form-label">New Check in date</label>
+                                                    <input id = "newdatein" type="date" class="form-control border border-white">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="new-email" class="form-label">New Check out date</label>
+                                                    <input id = "newdateout" type="date" class="form-control border border-white">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="newdatasubmit" type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-dark"><i class="bi bi-x-lg me-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-4 bg-black">
+        <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light a-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light a-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light a-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light a-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light a-link">About</a></li>
+        </ul>
+        <p class="text-center text-secondary">© 2024 Company, Inc</p>
+    </footer>
+<script src = "backend/account.js"></script>
+</body>
+</html>

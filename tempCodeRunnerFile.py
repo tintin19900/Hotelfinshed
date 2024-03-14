@@ -1,0 +1,1 @@
+ hotel_list.myHotel.add_room(hotel_name, add_room.detail, add_room.price, add_room.guest, add_room.image)

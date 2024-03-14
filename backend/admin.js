@@ -60,7 +60,7 @@ async function addhotel(){
         country: country,
         city: city,
         maps: map,
-        image: img
+        imgsrc: img
     };
     const response = await fetch(`${api}/admin/add_hotel`, {
         method: 'POST',
@@ -77,7 +77,7 @@ async function addhotel(){
 
     const data = await response.json();
     console.log(data.HotelID);
-    alert('Hotel added successfully.\nYour hotel ID is : ' + data.HotelID);
+    alert('Hotel added successfully.\nYour hotel ID is : ' + data.HotelID._Hotel__id);
     return;
 }
 

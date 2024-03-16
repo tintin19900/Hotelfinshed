@@ -1,0 +1,12 @@
+pip install ของ python 
+
+1.fastapi
+2.uvicorn
+3.nltk
+
+
+เมื่อจะใช้งานเปิดเซิฟเวอร์
+
+1.โหลด Live Server Extension ของ Ritwick Dey (ใช้ VS Code สีฟ้า)
+2.เข้าไฟล์ api แล้วรัน uvicorn ที่ port 8000
+3.เข้าไฟล์ index.html ที่ด้านซ้ายล่างกด Live server 
